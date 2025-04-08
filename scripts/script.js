@@ -5,7 +5,7 @@ async function getLanguages() {
     try {
         const response = await fetch(url)
         if (!response.ok) {
-           console.error(`Response status : ${response.status}`)
+            console.error(`Response status : ${response.status}`)
         }
 
         const json = await response.json();
@@ -21,6 +21,7 @@ async function getLanguages() {
     }
 
 }
+
 getLanguages()
 
 let select = document.getElementById('lang')
@@ -66,10 +67,42 @@ async function getRandomRepo(language) {
         } else {
             return null;
         }
-    }catch
-        (error)
-    {
+    } catch
+        (error) {
         console.error(error.message);
         throw error;
-    }}
+    }
+}
 
+async function fetchRepo() {
+    const card = document.getElementById('repo-detail');
+    card.innerText = "Fetching...";
+    console.log('Fetching...');
+    console.log('aaa...');
+
+    try {
+        const repoDetails = await getRandomRepo(selectedLang);
+
+        if (repoDetails) {
+            card.innerText = `
+                Repo Name: ${repoDetails.name}
+                Language: ${repoDetails.language}
+                Description: ${repoDetails.description}
+                Stars: ${repoDetails.stars}
+                Forks: ${repoDetails.forks}
+                Open Issues: ${repoDetails.openIssues}
+            `;
+        } else {
+            card.innerText = "No repository found!";
+        }
+    } catch (error) {
+        if (error.message.includes("API rate limit exceeded")) {
+            card.innerText = "Error: API rate limit exceeded. Please wait or authenticate with a GitHub token.";
+        } else {
+            card.innerText = `Error: ${error.message}`;
+        }
+    }
+}
+
+document.getElementById('fetch').addEventListener('click', fetchRepo);
+document.getElementById('refresh').addEventListener('click', fetchRepo)
