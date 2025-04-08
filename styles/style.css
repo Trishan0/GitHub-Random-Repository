@@ -1,0 +1,102 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Centered container */
+.container {
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title styling */
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Dropdown styling */
+.selection {
+    margin-bottom: 20px;
+}
+
+select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Repo detail display */
+.repo-detail {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #555;
+    min-height: 150px;
+}
+
+/* Buttons container */
+.button-container {
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn:active {
+    background-color: #003f7f;
+}
+
+/* Error message styling */
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+.btn:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: translateY(-2px);
+}
+#retry {
+    background-color: #dd0000;
+    color : white;
+}
+
+#refresh {
+    background-color: #5a5a5a;
+    color : white;
+
+}
+#fetch {
+    background-color: #136ec1;
+    color : white;
+
+}
