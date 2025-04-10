@@ -3,12 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GitHub-Random-Repository</title>
+    <title>GitHub Repository Finder</title>
     <link rel="stylesheet" href="styles/style.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/github-mark-white.png"
+      type="image/x-icon"
+    />
   </head>
   <body>
     <div class="container">
-      <h1>GitHub Repository Finder</h1>
+      <div class="header">
+        <img src="assets/github-mark.svg" alt="GitHub Logo" />&nbsp;
+        <h1>GitHub Repository Finder</h1>
+      </div>
 
       <!-- Language Selection Dropdown -->
       <div class="selection">
@@ -19,7 +27,16 @@
 
       <!-- Repo Detail Display -->
       <div class="repo-detail" id="repo-detail">
-        <p>Please Select a Language</p>
+        <div class="repo-card placeholder">
+          <div class="repo-name">
+            <h3>Please Select a Language</h3>
+          </div>
+          <div class="repo-description">
+            Choose a programming language from the dropdown above and click
+            "Fetch Random Repo" to discover interesting repositories.
+          </div>
+          <div class="repo-stats"></div>
+        </div>
       </div>
 
       <!-- Buttons for fetching and refreshing -->
