@@ -1,5 +1,6 @@
 # GitHub-Random-Repository
 
+Check out the live demo: [Click Here](https://trishan0.github.io/GitHub-Random-Repository/)
 
 A web application that helps you discover random GitHub repositories based on programming languages. This tool makes it easy to explore new projects and find interesting repositories you might not encounter otherwise.
 
@@ -108,6 +109,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🔗 Demo
 
-Check out the live demo: [GitHub-Random-Repository](https://roadmap.sh/projects/github-random-repo)
 
 Original Project Link [Click Here](https://roadmap.sh/projects/github-random-repo)
