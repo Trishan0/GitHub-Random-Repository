@@ -224,9 +224,10 @@ select:focus {
 }
 
 /* Responsive adjustments */
-@media (max-width: 500px) {
+@media (max-width: 800px) {
     .container {
         padding: 20px 15px;
+        margin: 40px
     }
 
     h1 {
